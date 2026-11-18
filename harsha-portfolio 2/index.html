@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahanandigari Harsha Vardhan Reddy | Portfolio</title>
+  <meta name="description" content="AI & Cloud Computing Enthusiast | Data Scientist | Tech Innovator - Mahanandigari Harsha Vardhan Reddy Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-mode">
+  <!-- Interactive Ambient Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Glowing Ambient Background Blobs -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-center-right"></div>
+  <div class="ambient-glow glow-bottom-center"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo HR -->
+      <a href="#home" class="brand-logo" id="brand-logo" aria-label="Harsha Vardhan Reddy Home">
+        <span class="logo-badge">HR</span>
+        <span class="logo-name">Harsha Vardhan Reddy</span>
+      </a>
+
+      <!-- Center Navigation Pills -->
+      <nav class="nav-container" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li>
+            <button class="nav-pill active" data-target="home" aria-current="page">
+              <span>Home</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-pill" data-target="experience">
+              <span>Experience</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-pill" data-target="skills">
+              <span>Skills</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-pill" data-target="education">
+              <span>Education</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-pill" data-target="projects">
+              <span>Projects</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <!-- View Mode Switcher: Page by Page (Matches Image) vs Continuous Scroll -->
+        <button class="mode-toggle-btn" id="mode-toggle-btn" title="Toggle between Slide Pages and Continuous Scroll">
+          <svg class="icon-slide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+          <span class="mode-text">Page View</span>
+        </button>
+
+        <!-- Sound FX Toggle -->
+        <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle Sound Effects" title="Toggle UI Sound Effects">
+          <svg class="audio-on-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="audio-off-icon hidden" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Contact Me Pill CTA -->
+        <button class="contact-pill-btn" id="header-contact-btn">
+          <span>Contact Me</span>
+          <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <span class="logo-badge">HR</span>
+      <span class="logo-name">Harsha Vardhan Reddy</span>
+      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><button class="mobile-nav-link active" data-target="home">Home</button></li>
+      <li><button class="mobile-nav-link" data-target="experience">Experience</button></li>
+      <li><button class="mobile-nav-link" data-target="skills">Skills</button></li>
+      <li><button class="mobile-nav-link" data-target="education">Education</button></li>
+      <li><button class="mobile-nav-link" data-target="projects">Projects</button></li>
+      <li><button class="mobile-nav-link" data-target="contact">Contact</button></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <button class="contact-pill-btn w-full" id="mobile-contact-btn">
+        <span>Contact Me</span>
+        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main View Container -->
+  <main class="main-viewport" id="main-viewport">
+    
+    <!-- ==============================================
+         PAGE 1: HOME / HERO
+         ============================================== -->
+    <section class="page-section section-home active" id="home" data-section-name="Home">
+      <div class="section-container hero-layout">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge-tag">
+            <span class="pulsing-dot"></span>
+            <span class="hero-greeting">Hello, I'm</span>
+          </div>
+
+          <h1 class="hero-name">
+            <span class="hero-first">Mahanandigari</span>
+            <span class="hero-full">Harsha Vardhan Reddy</span>
+          </h1>
+
+          <div class="hero-roles-bar">
+            <span class="role-badge">AI & Cloud Computing Enthusiast</span>
+            <span class="role-divider">•</span>
+            <span class="role-badge">Data Scientist</span>
+            <span class="role-divider">•</span>
+            <span class="role-badge">Tech Innovator</span>
+          </div>
+
+          <p class="hero-description">
+            Data-driven AI and Cloud Computing professional with expertise in machine learning, data analytics, and cloud technologies. Developing AI-powered solutions, robust pipelines, and actionable insights with high impact.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary" id="hero-explore-btn">
+              <span>Explore My Work</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <button class="btn-secondary" id="hero-resume-btn">
+              <span>Download Resume</span>
+              <svg class="download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Social Links Bar -->
+          <div class="hero-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+              </svg>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle" title="GitHub" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+              </svg>
+            </a>
+
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle" title="YouTube" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+            <a href="mailto:harshavardhanr576@gmail.com" class="social-circle" title="Send Email" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Portrait & Floating Quote -->
+        <div class="hero-visual">
+          <div class="portrait-ambient-wrap" id="portrait-3d-wrap">
+            <!-- Pulsing ambient glow rings -->
+            <div class="orbital-ring ring-1"></div>
+            <div class="orbital-ring ring-2"></div>
+            <div class="orbital-ring ring-3"></div>
+            
+            <!-- Crystal-clear Original Studio Portrait -->
+            <div class="portrait-container">
+              <img src="assets/harsha-hd.png" alt="Mahanandigari Harsha Vardhan Reddy" class="portrait-image" id="hero-portrait" />
+              <div class="portrait-vignette"></div>
+            </div>
+
+            <!-- Floating Quote Card (matches image text) -->
+            <div class="floating-quote-card">
+              <div class="quote-mark">“</div>
+              <p class="quote-text">Innovating<br>Today for a<br>Smarter Tomorrow”</p>
+            </div>
+
+            <!-- Interactive Sparkle Accents -->
+            <div class="floating-sparkle sparkle-1">✦</div>
+            <div class="floating-sparkle sparkle-2">✧</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick page hint indicator -->
+      <div class="slide-indicator">
+        <span class="slide-page-badge">01 / 05</span>
+        <button class="slide-next-arrow" data-target="experience" title="Go to Next Page">
+          <span>Experience</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ==============================================
+         PAGE 2: EXPERIENCE
+         ============================================== -->
+    <section class="page-section section-experience" id="experience" data-section-name="Experience">
+      <div class="section-container experience-layout">
+        
+        <!-- Left Side: Title + 3D Glowing Laptop Device -->
+        <div class="side-col experience-side">
+          <div class="section-header-group">
+            <h2 class="section-title">My<br><span class="title-highlight">Experience</span></h2>
+            <p class="section-subtitle">A journey of learning,<br>building and innovating.</p>
+          </div>
+
+          <!-- 3D Glowing Device Artwork (matching screenshot) -->
+          <div class="artwork-container" id="exp-artwork">
+            <div class="pedestal-orbit-ring"></div>
+            <div class="pedestal-glow-core"></div>
+            <img src="assets/laptop-exp-hd.png" alt="Futuristic 3D Laptop" class="artwork-img-laptop floating-element" />
+            <div class="artwork-hologram">
+              <span class="hologram-line"></span>
+              <span class="hologram-line"></span>
+              <span class="hologram-chip">AI Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Chronological Timeline with verified bullet points -->
+        <div class="content-col experience-timeline-col">
+          <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+
+            <!-- Item 1: Founder - Nexa Creation -->
+            <div class="timeline-item" data-id="exp-1">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Rocket Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 9V4s3.03.55 4 2c1.08 1.62 0 5 0 5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Founder <span class="company-name">– Nexa Creation</span></h3>
+                    <div class="role-location">Hyderabad, Telangana, India</div>
+                  </div>
+                  <span class="timeline-date">Jun 2026 – Present</span>
+                </div>
+                <p class="role-description">Driving a technology venture, building digital solutions.</p>
+                <ul class="role-bullet-list">
+                  <li>Founded and lead a technology venture, driving product strategy, development, and business operations.</li>
+                  <li>Oversee end-to-end execution of AI and software solutions from ideation through cloud deployment.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">Venture Leadership</span>
+                  <span class="mini-tag">Product Strategy</span>
+                  <span class="mini-tag">AI Architecture</span>
+                  <span class="mini-tag">Cloud Deploy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Associate Data Scientist - Prajwalynx -->
+            <div class="timeline-item" data-id="exp-2">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Analytics / Bar chart Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Associate Data Scientist <span class="company-name">– Prajwalynx Finovations</span></h3>
+                    <div class="role-location">Hyderabad, Telangana, India</div>
+                  </div>
+                  <span class="timeline-date">Apr 2026 – Present</span>
+                </div>
+                <p class="role-description">Developed “Manage My Hostels” platform with ML & NLP.</p>
+                <ul class="role-bullet-list">
+                  <li>Developed a scalable "Manage My Hostels" platform handling thousands of student records, fee transactions, and utility bills.</li>
+                  <li>Implemented secure authentication, automated reporting, and integrated payment processing systems.</li>
+                  <li>Applied Machine Learning and Natural Language Processing (NLP) techniques to enhance platform automation.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">NLP</span>
+                  <span class="mini-tag">Machine Learning</span>
+                  <span class="mini-tag">Secure Auth</span>
+                  <span class="mini-tag">Payment Integration</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: Intern Trainee - TwiLearn Inc -->
+            <div class="timeline-item" data-id="exp-3">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Graduation Cap Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Internship Trainee <span class="company-name">– TwiLearn Inc</span></h3>
+                    <div class="role-location">Pune, Maharashtra, India</div>
+                  </div>
+                  <span class="timeline-date">Dec 2025 – Present</span>
+                </div>
+                <p class="role-description">Building AI-powered educational solutions.</p>
+                <ul class="role-bullet-list">
+                  <li>Developing AI-powered educational solutions and data analytics tools for enhanced learning experiences.</li>
+                  <li>Collaborating with cross-functional teams to implement machine learning models and cloud-based infrastructure.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">EdTech AI</span>
+                  <span class="mini-tag">ML Models</span>
+                  <span class="mini-tag">Cloud Infrastructure</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: Data Analyst - Coreline Solutions -->
+            <div class="timeline-item" data-id="exp-4">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Database Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Data Analyst <span class="company-name">– Coreline Solutions Pvt Ltd</span></h3>
+                    <div class="role-location">Pune, Maharashtra, India</div>
+                  </div>
+                  <span class="timeline-date">Dec 2025 – Jan 2026</span>
+                </div>
+                <p class="role-description">Created dashboards & ETL pipelines.</p>
+                <ul class="role-bullet-list">
+                  <li>Performed data extraction, transformation, and loading (ETL) processes using Python and SQL.</li>
+                  <li>Created interactive dashboards and reports using Power BI to support business decision-making.</li>
+                  <li>Conducted data quality assessments and implemented data validation procedures.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">Python ETL</span>
+                  <span class="mini-tag">SQL</span>
+                  <span class="mini-tag">Power BI Dashboards</span>
+                  <span class="mini-tag">Data Quality</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Data Analyst - Elevate Labs -->
+            <div class="timeline-item" data-id="exp-5">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Chart icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3v18h18"></path>
+                    <path d="m19 9-5 5-4-4-3 3"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Data Analyst <span class="company-name">– Elevate Labs</span></h3>
+                    <div class="role-location">Bengaluru, Karnataka, India</div>
+                  </div>
+                  <span class="timeline-date">Nov 2025 – Dec 2025</span>
+                </div>
+                <p class="role-description">Analyzed large datasets for insights.</p>
+                <ul class="role-bullet-list">
+                  <li>Analyzed large datasets to identify trends, patterns, and insights for enterprise stakeholders.</li>
+                  <li>Developed automated reporting solutions to streamline data analysis workflows.</li>
+                  <li>Collaborated with product teams to define KPIs and track performance metrics.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">Big Data Insights</span>
+                  <span class="mini-tag">Automated Reports</span>
+                  <span class="mini-tag">KPI Optimization</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6: Data Scientist - Innoknowvex -->
+            <div class="timeline-item" data-id="exp-6">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-icon-box">
+                  <!-- Brain / AI network Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a4.5 4.5 0 0 0-4.5 4.5c0 .65.14 1.27.39 1.83A4.5 4.5 0 0 0 4.5 12c0 .94.29 1.81.79 2.53A4.5 4.5 0 0 0 9.5 21a4.5 4.5 0 0 0 2.5-.75 4.5 4.5 0 0 0 2.5.75 4.5 4.5 0 0 0 4.21-6.47 4.5 4.5 0 0 0 .79-2.53 4.5 4.5 0 0 0-3.39-3.67c.25-.56.39-1.18.39-1.83A4.5 4.5 0 0 0 12 2z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-card">
+                <div class="card-top-row">
+                  <div>
+                    <h3 class="role-title">Data Scientist <span class="company-name">– Innoknowvex</span></h3>
+                    <div class="role-location">Bangalore, India</div>
+                  </div>
+                  <span class="timeline-date">Jul 2025 – Sep 2025</span>
+                </div>
+                <p class="role-description">Built ML models for predictive analytics.</p>
+                <ul class="role-bullet-list">
+                  <li>Built and deployed machine learning models for predictive analytics and classification tasks.</li>
+                  <li>Implemented computer vision solutions using OpenCV and deep learning frameworks.</li>
+                  <li>Optimized model performance through feature engineering and hyperparameter tuning.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="mini-tag">Predictive ML</span>
+                  <span class="mini-tag">OpenCV Vision</span>
+                  <span class="mini-tag">Feature Engineering</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slide-indicator">
+        <span class="slide-page-badge">02 / 05</span>
+        <button class="slide-next-arrow" data-target="skills" title="Go to Skills Page">
+          <span>Skills</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ==============================================
+         PAGE 3: SKILLS
+         ============================================== -->
+    <section class="page-section section-skills" id="skills" data-section-name="Skills">
+      <div class="section-container skills-layout">
+        
+        <!-- Left Side: Header + 3D Glowing Code Screen -->
+        <div class="side-col skills-side">
+          <div class="section-header-group">
+            <h2 class="section-title">My<br><span class="title-highlight">Skills</span></h2>
+            <p class="section-subtitle">Technologies I work with<br>to turn ideas into impact.</p>
+          </div>
+
+          <div class="artwork-container" id="skills-artwork">
+            <div class="pedestal-orbit-ring ring-cyan"></div>
+            <div class="pedestal-glow-core glow-cyan-light"></div>
+            <img src="assets/code-tablet-hd.png" alt="3D Code Tablet Screen" class="artwork-img-tablet floating-element" />
+            <div class="code-glow-badge">&lt;/&gt;</div>
+          </div>
+        </div>
+
+        <!-- Center: 12 Technology Cards Grid (Exact matching 3x4 layout from screenshot) -->
+        <div class="content-col skills-center-col">
+          <div class="tech-grid">
+            
+            <!-- Python -->
+            <div class="tech-card" data-tech="Python">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2c5.52 0 5.5 2.38 5.5 2.38l-.01 2.47H12.1v.74h6.77s3.13-.36 3.13 5.41c0 5.77-2.73 5.56-2.73 5.56h-1.63v-2.3s.16-2.73-2.69-2.73h-5.38s-2.62.05-2.62-2.57V5.5S6.48 2 12 2zm-1.88 1.72a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm1.88 18.28c-5.52 0-5.5-2.38-5.5-2.38l.01-2.47h5.39v-.74H5.13S2 16.77 2 11c0-5.77 2.73-5.56 2.73-5.56h1.63v2.3s-.16 2.73 2.69 2.73h5.38s2.62-.05 2.62 2.57v5.46s.47 3.5-5.05 3.5zm1.88-1.72a.85.85 0 1 0 0-1.7.85.85 0 0 0 0 1.7z"/>
+                </svg>
+              </div>
+              <span class="tech-label">Python</span>
+              <span class="tech-level-tag">Advanced</span>
+            </div>
+
+            <!-- SQL -->
+            <div class="tech-card" data-tech="SQL">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <span class="tech-label">SQL</span>
+              <span class="tech-level-tag">Advanced</span>
+            </div>
+
+            <!-- Power BI -->
+            <div class="tech-card" data-tech="Power BI">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.5 2h3a.5.5 0 0 1 .5.5v19a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-19a.5.5 0 0 1 .5-.5zm-6 5h3a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5zm-6 5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+              </div>
+              <span class="tech-label">Power BI</span>
+              <span class="tech-level-tag">Mastery</span>
+            </div>
+
+            <!-- TensorFlow -->
+            <div class="tech-card" data-tech="TensorFlow">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2 4 6.7v9.4l8 4.7 8-4.7V6.7L12 2zm0 2.5 5.5 3.2v6.4L12 17.3l-5.5-3.2V7.7L12 4.5z"/>
+                </svg>
+              </div>
+              <span class="tech-label">TensorFlow</span>
+              <span class="tech-level-tag">Proficient</span>
+            </div>
+
+            <!-- Scikit-learn -->
+            <div class="tech-card" data-tech="Scikit-learn">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <circle cx="12" cy="18" r="3"></circle>
+                  <line x1="8.5" y1="7.5" x2="15.5" y2="7.5"></line>
+                  <line x1="7.5" y1="8.5" x2="10.5" y2="15.5"></line>
+                  <line x1="16.5" y1="8.5" x2="13.5" y2="15.5"></line>
+                </svg>
+              </div>
+              <span class="tech-label">Scikit-learn</span>
+              <span class="tech-level-tag">Advanced</span>
+            </div>
+
+            <!-- OpenCV -->
+            <div class="tech-card" data-tech="OpenCV">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="7" r="4"></circle>
+                  <circle cx="7" cy="16" r="4"></circle>
+                  <circle cx="17" cy="16" r="4"></circle>
+                </svg>
+              </div>
+              <span class="tech-label">OpenCV</span>
+              <span class="tech-level-tag">Vision ML</span>
+            </div>
+
+            <!-- AWS -->
+            <div class="tech-card" data-tech="AWS">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <span class="tech-label">AWS</span>
+              <span class="tech-level-tag">EC2/S3/Lambda</span>
+            </div>
+
+            <!-- Azure -->
+            <div class="tech-card" data-tech="Azure">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13.05 4.24 6.56 15.65 2 15.65 10.45 2.11 13.05 4.24zm.89 1.48 4.6 8.04H22l-7.07-12.3-1 2.26zm-2.8 11.93-3.2 4.24H21.5l-3.32-4.24H11.14z"/>
+                </svg>
+              </div>
+              <span class="tech-label">Azure</span>
+              <span class="tech-level-tag">Azure DevOps</span>
+            </div>
+
+            <!-- Google Cloud -->
+            <div class="tech-card" data-tech="Google Cloud">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                </svg>
+              </div>
+              <span class="tech-label">Google Cloud</span>
+              <span class="tech-level-tag">GCP BigData</span>
+            </div>
+
+            <!-- React -->
+            <div class="tech-card" data-tech="React">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="1.8"/>
+                </svg>
+              </div>
+              <span class="tech-label">React</span>
+              <span class="tech-level-tag">Modern UI</span>
+            </div>
+
+            <!-- Next.js -->
+            <div class="tech-card" data-tech="Next.js">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.5 14.5-5.5-7.5H9v7.5H7.5V7.5H10l5.5 7.5V7.5h1.5v9h-.5z"/>
+                </svg>
+              </div>
+              <span class="tech-label">Next.js</span>
+              <span class="tech-level-tag">Fullstack</span>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="tech-card" data-tech="MongoDB">
+              <div class="tech-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2C12 2 6 9 6 14a6 6 0 0 0 12 0c0-5-6-12-6-12z"></path>
+                  <path d="M12 2v20"></path>
+                </svg>
+              </div>
+              <span class="tech-label">MongoDB</span>
+              <span class="tech-level-tag">NoSQL DB</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Side: 6 Core Competencies Checklist (matching screenshot) -->
+        <div class="content-col skills-checklist-col">
+          <div class="competencies-card">
+            <h3 class="competencies-heading">Core Domains</h3>
+            <ul class="checklist-list">
+              
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Data Analysis & Visualization</span>
+              </li>
+
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Machine Learning & Deep Learning</span>
+              </li>
+
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Cloud Computing</span>
+              </li>
+
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Big Data Technologies</span>
+              </li>
+
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Web Development</span>
+              </li>
+
+              <li class="check-item">
+                <span class="check-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="check-title">Database Management</span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slide-indicator">
+        <span class="slide-page-badge">03 / 05</span>
+        <button class="slide-next-arrow" data-target="education" title="Go to Education Page">
+          <span>Education</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ==============================================
+         PAGE 4: EDUCATION & CERTIFICATIONS
+         ============================================== -->
+    <section class="page-section section-education" id="education" data-section-name="Education">
+      <div class="section-container education-layout">
+        
+        <!-- Left Side: Title + 3D Glowing Grad Cap Device -->
+        <div class="side-col education-side">
+          <div class="section-header-group">
+            <h2 class="section-title">My<br><span class="title-highlight">Education</span></h2>
+            <p class="section-subtitle">A strong foundation<br>for a brighter future.</p>
+          </div>
+
+          <div class="artwork-container" id="edu-artwork">
+            <div class="pedestal-orbit-ring ring-white"></div>
+            <div class="pedestal-glow-core glow-white-light"></div>
+            <img src="assets/grad-cap-hd.png" alt="3D Graduation Cap and Diploma" class="artwork-img-grad floating-element" />
+            <div class="edu-floating-stars">✦ ✦ ✦</div>
+          </div>
+        </div>
+
+        <!-- Right Side: Educational Institutions Cards & Certifications -->
+        <div class="content-col education-content-col">
+          <div class="education-cards-wrapper">
+            
+            <!-- Institution 1: CBIT -->
+            <div class="edu-card card-interactive">
+              <div class="edu-icon-wrap">
+                <!-- University building pillars icon -->
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M3 21h18"></path>
+                  <path d="M5 21V10"></path>
+                  <path d="M9 21V10"></path>
+                  <path d="M15 21V10"></path>
+                  <path d="M19 21V10"></path>
+                  <path d="M2 10h20"></path>
+                  <polygon points="12 2 2 7 22 7 12 2"></polygon>
+                </svg>
+              </div>
+
+              <div class="edu-details">
+                <div class="edu-header-row">
+                  <div>
+                    <h3 class="edu-inst-name">Chaitanya Bharathi Institute of Technology</h3>
+                    <div class="edu-location">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      Hyderabad, India
+                    </div>
+                  </div>
+                  <div class="edu-meta-right">
+                    <span class="edu-timeframe">July 2024 – August 2027</span>
+                  </div>
+                </div>
+
+                <div class="edu-degree-row">
+                  <span class="edu-degree">Bachelor of Technology in Artificial Intelligence</span>
+                  <div class="edu-score-badge">
+                    <span class="score-label">GPA:</span>
+                    <strong class="score-value">7.7 / 10.0</strong>
+                  </div>
+                </div>
+
+                <p class="edu-notes">
+                  Rigorous curriculum spanning advanced Neural Networks, Natural Language Processing, Computer Vision, Distributed AI Systems, and Mathematics for Machine Learning.
+                </p>
+              </div>
+            </div>
+
+            <!-- Institution 2: St. Mary's -->
+            <div class="edu-card card-interactive">
+              <div class="edu-icon-wrap">
+                <!-- Institute building icon -->
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M3 21h18"></path>
+                  <path d="M4 21V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v17"></path>
+                  <path d="M12 11h6a2 2 0 0 1 2 2v8"></path>
+                  <path d="M7 7h2"></path>
+                  <path d="M7 11h2"></path>
+                  <path d="M7 15h2"></path>
+                  <path d="M16 15h2"></path>
+                </svg>
+              </div>
+
+              <div class="edu-details">
+                <div class="edu-header-row">
+                  <div>
+                    <h3 class="edu-inst-name">St. Mary’s Group of Institutions</h3>
+                    <div class="edu-location">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                      Guntur, India
+                    </div>
+                  </div>
+                  <div class="edu-meta-right">
+                    <span class="edu-timeframe">January 2021 – April 2024</span>
+                  </div>
+                </div>
+
+                <div class="edu-degree-row">
+                  <span class="edu-degree">Diploma in Cloud Computing and Big Data</span>
+                  <div class="edu-score-badge">
+                    <span class="score-label">GPA:</span>
+                    <strong class="score-value">78%</strong>
+                  </div>
+                </div>
+
+                <p class="edu-notes">
+                  Comprehensive grounding in Hadoop, Apache Spark, Cloud Infrastructure (AWS & Azure), Data Warehousing, Data Lakes, and high-performance database management.
+                </p>
+              </div>
+            </div>
+
+            <!-- Verified Certifications Shelf from Resume Page 2 -->
+            <div class="certifications-shelf">
+              <div class="cert-header">
+                <span class="cert-title">Verified Industry Certifications</span>
+                <span class="cert-count">8 Credentials</span>
+              </div>
+              <div class="cert-badges-grid">
+                <span class="cert-badge">🏢 <strong>BCG</strong> – Data Science Job Simulation</span>
+                <span class="cert-badge">📊 <strong>Deloitte Australia</strong> – Data Analytics Simulation</span>
+                <span class="cert-badge">✈️ <strong>British Airways</strong> – Data Science Simulation</span>
+                <span class="cert-badge">📈 <strong>Quantium</strong> – Data Analytics Simulation</span>
+                <span class="cert-badge">⚡ <strong>Tata Group</strong> – GenAI Powered Data Analytics</span>
+                <span class="cert-badge">👁️ <strong>Tata Group</strong> – Data Visualisation & Insights</span>
+                <span class="cert-badge">🌐 <strong>IBM</strong> – Data Science Professional</span>
+                <span class="cert-badge">🐍 <strong>Reliance Foundation</strong> – Python Programming</span>
+              </div>
+            </div>
+
+            <!-- Bottom architectural silhouette backdrop (matches screenshot) -->
+            <div class="edu-palace-silhouette">
+              <svg viewBox="0 0 1200 180" fill="currentColor" opacity="0.18">
+                <path d="M0,180 L1200,180 L1200,140 L1080,140 L1080,120 L1040,120 L1040,80 L1010,50 L980,80 L980,140 L900,140 L900,100 L880,100 L880,70 L850,40 L820,70 L820,100 L800,100 L800,140 L700,140 L700,90 L680,90 L680,60 L650,30 L620,60 L620,90 L600,90 L600,20 L580,20 L550,0 L520,20 L500,20 L500,90 L480,90 L480,60 L450,30 L420,60 L420,90 L400,90 L400,140 L300,140 L300,100 L280,100 L280,70 L250,40 L220,70 L220,100 L200,100 L200,140 L120,140 L120,80 L90,50 L60,80 L60,120 L20,120 L20,140 L0,140 Z"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slide-indicator">
+        <span class="slide-page-badge">04 / 05</span>
+        <button class="slide-next-arrow" data-target="projects" title="Go to Projects Page">
+          <span>Projects</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ==============================================
+         PAGE 5: PROJECTS & GET IN TOUCH
+         ============================================== -->
+    <section class="page-section section-projects" id="projects" data-section-name="Projects">
+      <div class="section-container projects-layout">
+        
+        <!-- Left: Header + 3D Laptop with charts -->
+        <div class="side-col projects-side">
+          <div class="section-header-group">
+            <h2 class="section-title">My<br><span class="title-highlight">Projects</span></h2>
+            <p class="section-subtitle">Innovative solutions<br>built with passion.</p>
+          </div>
+
+          <div class="artwork-container" id="proj-artwork">
+            <div class="pedestal-orbit-ring ring-blue"></div>
+            <div class="pedestal-glow-core glow-blue-light"></div>
+            <img src="assets/proj-laptop-hd.png" alt="3D Laptop displaying analytics charts" class="artwork-img-proj-laptop floating-element" />
+          </div>
+        </div>
+
+        <!-- Center: 4 Projects Cards Grid (matches bottom screenshot) -->
+        <div class="content-col projects-grid-col">
+          <div class="projects-cards-row">
+            
+            <!-- Project 1: AgriVision -->
+            <div class="project-card" data-proj="agrivision">
+              <div class="project-thumb-box">
+                <img src="assets/proj-agrivision-hd.jpg" alt="AgriVision Preview" class="project-thumb-img" />
+                <div class="project-badge">AI & Vision</div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Agri Vision</h3>
+                <p class="project-desc">Multilingual Agri Assistant with crop recommendation, pest detection & fertilizer calculator.</p>
+                <div class="project-action-row">
+                  <button class="view-project-btn" data-project-id="agrivision">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Seva Setu -->
+            <div class="project-card" data-proj="sevasetu">
+              <div class="project-thumb-box">
+                <img src="assets/proj-sevasetu-hd.jpg" alt="Seva Setu Preview" class="project-thumb-img" />
+                <div class="project-badge">AI & Blockchain</div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Seva Setu</h3>
+                <p class="project-desc">Direct-to-worker platform connecting users with verified skilled workers via smart AI matching.</p>
+                <div class="project-action-row">
+                  <button class="view-project-btn" data-project-id="sevasetu">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Sales Pulse Dashboard -->
+            <div class="project-card" data-proj="salespulse">
+              <div class="project-thumb-box">
+                <img src="assets/proj-salespulse-hd.jpg" alt="Sales Pulse Dashboard Preview" class="project-thumb-img" />
+                <div class="project-badge">BI & Analytics</div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Sales Pulse Dashboard</h3>
+                <p class="project-desc">Interactive multi-dimensional BI dashboard visualizing sales, profit, and discount trends.</p>
+                <div class="project-action-row">
+                  <button class="view-project-btn" data-project-id="salespulse">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: Weather Report Dashboard -->
+            <div class="project-card" data-proj="weather">
+              <div class="project-thumb-box">
+                <img src="assets/proj-weather-hd.jpg" alt="Weather Dashboard Preview" class="project-thumb-img" />
+                <div class="project-badge">Power BI & DAX</div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Weather Report Dashboard</h3>
+                <p class="project-desc">Real-time weather analytics with advanced DAX calculations & dynamic operational filtering.</p>
+                <div class="project-action-row">
+                  <button class="view-project-btn" data-project-id="weather">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Side: Get In Touch Card (matches bottom right panel) -->
+        <div class="content-col contact-card-col">
+          <div class="get-in-touch-card">
+            <h3 class="touch-title">Get In Touch</h3>
+            <p class="touch-subtitle">Let’s build something amazing together!</p>
+
+            <ul class="contact-info-list">
+              <!-- Phone -->
+              <li class="contact-info-item">
+                <div class="contact-icon-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <a href="tel:+917093528048" class="contact-value">+91-7093528048</a>
+              </li>
+
+              <!-- Email (updated exactly from resume) -->
+              <li class="contact-info-item">
+                <div class="contact-icon-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <a href="mailto:harshavardhanr576@gmail.com" class="contact-value">harshavardhanr576@gmail.com</a>
+              </li>
+
+              <!-- Location -->
+              <li class="contact-info-item">
+                <div class="contact-icon-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="contact-value">Proddatur, Andhra Pradesh, India</span>
+              </li>
+            </ul>
+
+            <!-- Connect With Me CTA Button -->
+            <button class="connect-action-btn" id="connect-modal-btn">
+              <span>Connect with me</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <!-- Socials in Contact Card -->
+            <div class="card-socials-row">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-mini-pill" title="LinkedIn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-mini-pill" title="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-mini-pill" title="YouTube">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="mailto:harshavardhanr576@gmail.com" class="social-mini-pill" title="Email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slide-indicator">
+        <span class="slide-page-badge">05 / 05</span>
+        <button class="slide-next-arrow" data-target="home" title="Back to Top / Home">
+          <span>Back to Home</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==============================================
+       MODALS & OVERLAYS
+       ============================================== -->
+
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-card project-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <div class="modal-body" id="project-modal-content">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Contact Form Modal -->
+  <div class="modal-backdrop" id="contact-modal" aria-hidden="true">
+    <div class="modal-card contact-modal-card">
+      <button class="modal-close-btn" id="contact-modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Let's Connect</div>
+        <h3 class="modal-title">Send Harsha a Message</h3>
+        <p class="modal-desc">Have an opportunity, collaboration idea, or AI project in mind? Drop a message below!</p>
+      </div>
+      <form class="interactive-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="form-name">Your Name</label>
+            <input type="text" id="form-name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">Your Email</label>
+            <input type="email" id="form-email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="form-subject">Subject</label>
+          <input type="text" id="form-subject" placeholder="Project Inquiry / Job Opportunity" required />
+        </div>
+        <div class="form-group">
+          <label for="form-message">Message</label>
+          <textarea id="form-message" rows="4" placeholder="Hi Harsha, I saw your portfolio and would love to connect regarding..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="form-submit-btn">
+          <span>Send Message</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive Resume Viewer Modal (Complete Verified 2-Page CV) -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true">
+    <div class="modal-card resume-modal-card">
+      <div class="resume-modal-top">
+        <div class="resume-badge-status">
+          <span class="live-dot"></span> Verified Official Curriculum Vitae
+        </div>
+        <div class="resume-top-actions">
+          <button class="resume-print-btn" id="resume-print-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print CV</span>
+          </button>
+          <a href="#download" class="resume-download-btn" id="resume-download-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download PDF</span>
+          </a>
+          <button class="modal-close-btn relative-close" id="resume-modal-close-btn">&times;</button>
+        </div>
+      </div>
+      
+      <div class="resume-document" id="resume-document">
+        <!-- Resume Header -->
+        <header class="resume-doc-header">
+          <h2>Mahanandigari Harsha Vardhan Reddy</h2>
+          <div class="resume-doc-meta">
+            <span>📞 +91-7093528048</span>
+            <span>✉️ harshavardhanr576@gmail.com</span>
+            <span>🔗 LinkedIn</span>
+            <span>🐙 GitHub</span>
+            <span>📍 Proddatur, Andhra Pradesh, India</span>
+          </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-doc-section">
+          <h3>Professional Summary</h3>
+          <p>Data-driven AI and Cloud Computing professional with expertise in machine learning, data analytics, and cloud technologies. Proven track record of developing AI-powered solutions and delivering actionable insights through data visualization. Strong foundation in Python, SQL, and Power BI with hands-on experience in building end-to-end data pipelines and intelligent applications.</p>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-doc-section">
+          <h3>Education</h3>
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Chaitanya Bharathi Institute of Technology</strong> – Hyderabad, India
+              <span>July 2024 – August 2027</span>
+            </div>
+            <div class="entry-sub">Bachelor of Technology in Artificial Intelligence, GPA: 7.7/10.0</div>
+          </div>
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>St. Mary’s Group of Institutions</strong> – Guntur, India
+              <span>January 2021 – April 2024</span>
+            </div>
+            <div class="entry-sub">Diploma in Cloud Computing and Big Data, GPA: 78%</div>
+          </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="resume-doc-section">
+          <h3>Professional Experience</h3>
+          
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Founder</strong> – Nexa Creation, Hyderabad, Telangana, India
+              <span>June 2026 – Present</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Founded and lead a technology venture, driving product strategy, development, and business operations.</li>
+              <li>Oversee end-to-end execution of AI and software solutions from ideation through deployment.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Associate Data Scientist</strong> – Prajwalynx Finovations Private Limited, Hyderabad, Telangana, India
+              <span>April 2026 – Present</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Developed a scalable "Manage My Hostels" platform capable of handling thousands of student records, fee transactions, and utility bills.</li>
+              <li>Implemented secure authentication, automated reporting, and integrated payment processing systems.</li>
+              <li>Applied Machine Learning and Natural Language Processing (NLP) techniques to enhance platform intelligence and automation.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Internship Trainee</strong> – TwiLearn Inc, Pune, Maharashtra, India
+              <span>December 2025 – Present</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Developing AI-powered educational solutions and data analytics tools for enhanced learning experiences.</li>
+              <li>Collaborating with cross-functional teams to implement machine learning models and cloud-based infrastructure.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Data Analyst</strong> – Coreline Solutions Pvt Ltd, Pune, Maharashtra, India
+              <span>December 2025 – January 2026</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Performed data extraction, transformation, and loading (ETL) processes using Python and SQL.</li>
+              <li>Created interactive dashboards and reports using Power BI to support business decision-making.</li>
+              <li>Conducted data quality assessments and implemented data validation procedures.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Data Analyst</strong> – Elevate Labs, Bengaluru, Karnataka, India
+              <span>November 2025 – December 2025</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Analyzed large datasets to identify trends, patterns, and insights for stakeholders.</li>
+              <li>Developed automated reporting solutions to streamline data analysis workflows.</li>
+              <li>Collaborated with product teams to define KPIs and track performance metrics.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Data Scientist</strong> – Innoknowvex, Bangalore, India
+              <span>July 2025 – September 2025</span>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Built and deployed machine learning models for predictive analytics and classification tasks.</li>
+              <li>Implemented computer vision solutions using OpenCV and deep learning frameworks.</li>
+              <li>Optimized model performance through feature engineering and hyperparameter tuning.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="resume-doc-section">
+          <h3>Technical Skills</h3>
+          <div class="skills-grid-doc">
+            <div><strong>Programming Languages:</strong> Python, SQL, JavaScript</div>
+            <div><strong>Data Analysis & Visualization:</strong> Power BI, Excel, Pandas, NumPy, Matplotlib, Seaborn</div>
+            <div><strong>Machine Learning & AI:</strong> Scikit-learn, TensorFlow, Computer Vision, NLP, Predictive Modeling</div>
+            <div><strong>Cloud Platforms:</strong> AWS (EC2, S3, Lambda), Azure DevOps, Google Cloud Platform</div>
+            <div><strong>Big Data Technologies:</strong> Hadoop, Apache Hive, Apache Spark, Data Warehousing, Data Lakes</div>
+            <div><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</div>
+            <div><strong>Web & App Dev:</strong> Next.js, React, REST APIs, Secure Authentication Systems</div>
+            <div><strong>Business & Product:</strong> Automated Reporting, Payment Gateway Integration, Product Strategy</div>
+            <div><strong>Tools & Frameworks:</strong> Git, Docker, Jupyter Notebook, VS Code</div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-doc-section">
+          <h3>Featured Projects</h3>
+          
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Agri Vision</strong> | <em>Python, Next.js, Machine Learning, Computer Vision, NLP, APIs</em>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Developed an AI-powered agricultural platform featuring crop recommendation, pest detection, and fertilizer calculator.</li>
+              <li>Integrated machine learning models with weather and market APIs to provide real-time insights for farmers.</li>
+              <li>Built multilingual AI assistant supporting voice and text interactions using Natural Language Processing.</li>
+              <li>Designed responsive dashboard using Next.js for seamless user experience across devices.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Seva Setu</strong> | <em>Python, OpenCV, React, SQL, AI/ML, Blockchain</em>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Created direct-to-worker platform connecting users with verified skilled professionals using AI-driven smart matching.</li>
+              <li>Implemented AI task analysis system to determine DIY vs professional hire recommendations.</li>
+              <li>Integrated blockchain-based verification and payment system ensuring transparent transactions.</li>
+              <li>Developed secure profile validation using computer vision and machine learning models.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Sales Pulse Dashboard</strong> | <em>Power BI, Python, DAX</em>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Designed interactive BI dashboard visualizing multi-dimensional sales metrics across markets, segments, and categories.</li>
+              <li>Implemented dynamic filters, KPIs, and visual analytics (pie, bar, line charts) for actionable business insights.</li>
+              <li>Processed backend data using Python to enable real-time decision support for stakeholders.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <strong>Weather Report Dashboard</strong> | <em>Power BI, DAX, Python</em>
+            </div>
+            <ul class="resume-doc-bullets">
+              <li>Built interactive weather analytics dashboard with real-time data feeds and advanced DAX calculations.</li>
+              <li>Performed data preparation, transformation, and visualization revealing hidden weather trends.</li>
+              <li>Integrated dynamic filtering capabilities improving decision-making for weather-dependent operations.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-doc-section">
+          <h3>Certifications</h3>
+          <ul class="resume-doc-bullets cert-list-columns">
+            <li>BCG - Data Science Job Simulation</li>
+            <li>Deloitte Australia - Data Analytics Job Simulation</li>
+            <li>British Airways - Data Science Job Simulation</li>
+            <li>Quantium - Data Analytics Job Simulation</li>
+            <li>Tata Group - GenAI Powered Data Analytics Job Simulation</li>
+            <li>Tata Group - Data Visualisation: Empowering Business with Effective Insights</li>
+            <li>IBM - Data Science</li>
+            <li>Reliance Foundation - Python Programming</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Mobile Bottom Floating Navigation Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Quick Mobile Navigation">
+    <button class="mobile-bottom-btn active" data-target="home" aria-label="Home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </button>
+    <button class="mobile-bottom-btn" data-target="experience" aria-label="Experience">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Exp</span>
+    </button>
+    <button class="mobile-bottom-btn" data-target="skills" aria-label="Skills">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      <span>Skills</span>
+    </button>
+    <button class="mobile-bottom-btn" data-target="education" aria-label="Education">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      <span>Edu</span>
+    </button>
+    <button class="mobile-bottom-btn" data-target="projects" aria-label="Projects">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Projects</span>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
